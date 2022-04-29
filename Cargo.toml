@@ -1,0 +1,17 @@
+[package]
+name = "test-async-saving"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+multi-threads = []
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "*", features = ["full"] }
+tokio-util = { version = "*", features = ["full"] }
+bastion = { git = "https://github.com/bastion-rs/bastion", branch = "master", features = ["tokio-runtime"] }
+anyhow = "*"
+tracing = "*"
+tracing-subscriber = "*"
